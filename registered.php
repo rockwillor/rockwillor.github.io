@@ -17,16 +17,16 @@ if($username&&$password)
 	if($numrows==0)
 	{
 		mysql_query("INSERT INTO user (fName, sName, email, password, username ) VALUES ('$fname', '$sname', '$email', '$password', '$username')");
-		header( "refresh:3; url=http://localhost/index.php" );
+		header( "refresh:3; url=/index.php" );
 		echo "Account created!";	
 	}else{
-		header( "refresh:3; url=http://localhost/register.php" ); 
+		header( "refresh:3; url=/register.php" ); 
 		die("Sorry that username is already in use");
 		}
 }else{
-	header( "refresh:3; url=http://localhost/register.php" );
+	header( "refresh:3; url=/register.php" );
 	die("Please enter a username and password");
 	}
 ?>
-<META HTTP-EQUIV="refresh" CONTENT="3;URL=http://localhost/index.php">
+<META HTTP-EQUIV="refresh" CONTENT="3;URL=/index.php">
 </html>
